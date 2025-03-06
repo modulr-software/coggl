@@ -1,0 +1,25 @@
+(ns dev
+  (:require
+   [coggl.toggl :as toggl]
+   [coggl.util :as util]
+   [coggl.session :as session]
+   [coggl.config :as config]))
+
+(comment
+  (toggl/get-me (util/read-dev-token))
+
+  (let [test-path (:token-path config/env)
+        test-password "test-password"
+        token (util/read-dev-token)]
+    (session/save-token! test-path token test-password))
+  (let [test-path (:token-path config/env)]
+    (session/delete-token! test-path))
+
+;;   test wether or not writing a test token to a test file passes auth validation
+  (let [token (util/read-dev-token)
+        test-password "test-password"
+        test-path (:token-path config/env)]
+    (session/save-token! test-path token test-password)
+    (session/validate-session test-path test-password))
+  
+  )
