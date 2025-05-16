@@ -22,4 +22,4 @@
     (not (some? token))
     false
     :else
-    (or (toggl/get-me token) nil))))
+    (or (toggl/get-me token) false))))
