@@ -8,8 +8,7 @@
   (->
    (hash/sha1 password)
    (cod/bytes->hex)
-   (subs 0 16)
-   ))
+   (subs 0 16)))
 
 (defn- gen-key [password]
   (->
@@ -36,6 +35,3 @@
          (gen-iv password))
         (cod/bytes->str))
     (catch Exception _ false)))
-
-(-> (hash-value "something" "test")
-    (verify "test"))
