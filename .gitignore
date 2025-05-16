@@ -22,3 +22,7 @@ config.edn
 
 token.hash
 dev.token
+
+.cache/
+
+.DS_Store
