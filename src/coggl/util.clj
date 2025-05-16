@@ -1,8 +1,17 @@
 (ns coggl.util
-  (:require [coggl.fs :as fs]))
+  (:require [coggl.fs :as fs]
+            [coggl.config :as config]
+            [buddy.core.codecs :as cod]
+            [buddy.core.codecs.base64 :as b]))
 
 (defn read-dev-token []
-  (fs/read-session-file "dev.token"))
+  (->
+   (:dev-token-path config/env)
+   (fs/read-session-file)))
 
-(comment
-  (read-dev-token))
+(defn str->b64 [token]
+  (->
+   (b/encode token)
+   (cod/bytes->str)))
+
+(defn prr [v] (println v) v)
