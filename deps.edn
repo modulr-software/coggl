@@ -1,13 +1,11 @@
-{
- :paths ["src" "dev"]
- :deps {
-        buddy/buddy-core {:mvn/version "1.7.1"}
+{:paths ["src" "dev"]
+ :deps {buddy/buddy-core {:mvn/version "1.7.1"}
         babashka/fs {:mvn/version "0.5.24"}
         clj-http/clj-http {:mvn/version "3.13.0"}
         aero/aero {:mvn/version "1.1.6"}
         metosin/jsonista {:mvn/version "0.3.13"}
-
-       ;;  seancorfield/next.jdbc {:mvn/version "1.2.659"}
-       ;;  org.xerial/sqlite-jdbc {:mv/version "3.49.1.0"}
- }
-}
+        com.draines/postal {:mvn/version "2.0.5"}
+        hiccup/hiccup {:mvn/version "2.0.0-RC5"}
+        ;;  seancorfield/next.jdbc {:mvn/version "1.2.659"}
+        ;;  org.xerial/sqlite-jdbc {:mv/version "3.49.1.0"}
+        }}
