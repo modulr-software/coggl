@@ -5,10 +5,8 @@
 
 (defn write-file-crypt [path password content]
   (let [ciphertext (crypt/hash-value content password)]
-    (fs/update-file path (fn [_] ciphertext))))
+    (fs/write-bytes path (.getBytes (String. ciphertext)))))
 
 (defn read-file-crypt [path password]
-  (let [ciphertext (->
-                    (fs/read-all-lines path)
-                    (clojure.string/join))]
-    (crypt/verify ciphertext password)))
+  (-> (slurp path)
+      (crypt/verify  password)))
