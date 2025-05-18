@@ -1,0 +1,159 @@
+/* invoice.css */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.invoice-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.invoice-number {
+  font-size: 36px;
+  margin: 0;
+  line-height: 1;
+}
+
+.banking-details {
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.banking-details h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.banking-details p {
+  margin: 4px 0;
+}
+
+.banking-details .contact {
+  margin-top: 8px;
+}
+
+.vat-note {
+  font-size: 10px;
+  margin: 8px 0 24px 0;
+}
+
+.invoice-meta {
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+/* .info-grid using floats */
+.info-grid {
+  overflow: auto;
+  margin-bottom: 24px;
+}
+.info-grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.info-grid > div {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.info-grid > div:nth-child(3n) {
+  margin-right: 0;
+}
+.info-grid > div:nth-child(n+4) {
+  margin-top: 16px;
+}
+.info-grid strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Ensure table clears any floats above it */
+.items {
+  clear: both;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+.items th,
+.items td {
+  padding: 8px 4px;
+}
+.items th {
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+/* Align numeric columns’ headers to the right */
+.items th:nth-child(2),
+.items th:nth-child(3),
+.items th:nth-child(4) {
+  text-align: right;
+}
+.items td {
+  border-bottom: 1px solid #ddd;
+}
+.items td.right {
+  text-align: right;
+}
+
+/* summary-notes with floats */
+.summary-notes {
+  overflow: auto;
+  margin-bottom: 40px;
+  font-size: 12px;
+}
+.summary-notes::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.notes {
+  float: left;
+  width: 70%;
+  line-height: 1.4;
+}
+
+/* totals as table */
+.totals {
+  display: table;
+  margin-left: auto;
+}
+.total-row {
+  display: table-row;
+}
+.total-label,
+.total-value {
+  display: table-cell;
+  padding: 2px 8px;
+}
+.total-value {
+  text-align: right;
+}
+/* bold for the total row */
+.total-row.total {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 40px;
+}
+
