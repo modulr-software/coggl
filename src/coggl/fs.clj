@@ -78,4 +78,7 @@
       (fs/read-all-lines)
       (clojure.string/join)))
 
+(defn exists? [path]
+  (fs/exists? path))
+
 
