@@ -6,6 +6,7 @@
         metosin/jsonista {:mvn/version "0.3.13"}
         com.draines/postal {:mvn/version "2.0.5"}
         hiccup/hiccup {:mvn/version "2.0.0-RC5"}
+        clj-htmltopdf/clj-htmltopdf {:mvn/version "0.2.2"}
         ;;  seancorfield/next.jdbc {:mvn/version "1.2.659"}
         ;;  org.xerial/sqlite-jdbc {:mv/version "3.49.1.0"}
         }}
