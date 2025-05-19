@@ -25,6 +25,5 @@ dev.token
 
 .cache/
 gmail.password
-resources/invoice.template.html
 
 .DS_Store
